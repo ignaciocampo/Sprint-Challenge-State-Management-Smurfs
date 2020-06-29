@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
-import Smurfs from './SmurfsData';
-import SmurfForm from './SmurfForm';
+import SmurfsData from './SmurfsData';
+import SmurfForm from './SmurfInput';
 import { getSmurfs } from '../actions';
 import { connect } from 'react-redux';
 
@@ -13,7 +13,7 @@ class App extends Component {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-Title">SMURFS! 2.0 W/ Redux</h1>
+          <h1 className="App-Title">SMURFS!</h1>
           <SmurfForm />
         </header>
      
@@ -21,7 +21,7 @@ class App extends Component {
           {this.props.gettingSmurfs ? (
             <h3>Loading Smurfs...</h3>
           ) : (
-            <Smurfs  />
+            <SmurfsData  />
           )}
         </div>
       </div>
